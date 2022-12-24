@@ -15,8 +15,8 @@ import java.util.List;
 public class SpringMongoApplication implements CommandLineRunner {
 	@Autowired
 	private ItemRepository groceryItemRepo;
-	@Autowired
-	private CustomItemRepository customRepo;
+//	@Autowired
+//	private CustomItemRepository customRepo;
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringMongoApplication.class, args);
@@ -129,6 +129,6 @@ public class SpringMongoApplication implements CommandLineRunner {
 	// UPDATE
 	public void updateItemQuantity(String name, float newQuantity) {
 		System.out.println("Updating quantity for " + name);
-		customRepo.updateItemQuantity(name, newQuantity);
+//		customRepo.updateItemQuantity(name, newQuantity);
 	}
 }

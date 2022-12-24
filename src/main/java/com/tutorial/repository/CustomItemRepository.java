@@ -9,20 +9,20 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class CustomItemRepository {
-    @Autowired
-    private MongoTemplate mongoTemplate;
+//    @Autowired
+//    private MongoTemplate mongoTemplate;
 
     public void updateItemQuantity(String name, float newQuantity) {
-        Query query = new Query(Criteria.where("name").is(name));
-        Update update = new Update();
-        update.set("quantity", newQuantity);
-        UpdateResult result = mongoTemplate.updateFirst(query, update, GroceryItem.class);
-        if (result == null) {
-            System.out.println("No documents updated");
-        } else {
-            System.out.println(result.getModifiedCount() + " document(s) updated..");
-        }
+//        Query query = new Query(Criteria.where("name").is(name));
+//        Update update = new Update();
+//        update.set("quantity", newQuantity);
+//        UpdateResult result = mongoTemplate.updateFirst(query, update, GroceryItem.class);
+//        if (result == null) {
+//            System.out.println("No documents updated");
+//        } else {
+//            System.out.println(result.getModifiedCount() + " document(s) updated..");
+//        }
     };
 }
