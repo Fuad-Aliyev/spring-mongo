@@ -6,15 +6,16 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document("groceryitems")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class GroceryItem {
+@Document
+public class Book {
     @Id
-    private String id;
+    private Integer id;
 
     private String name;
-    private int quantity;
-    private String category;
+    private Integer pages;
+    private String author;
+    private Double cost;
 }
